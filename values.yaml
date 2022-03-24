@@ -1,0 +1,18 @@
+client:
+  replicas: 3
+  name: client
+  image: dekcode/todo-app:v4
+  metadata:
+    name: client-deployment
+  template:
+    name: client-pods
+server:
+  replicas: 3
+  name: server
+  image: dekcode/todo-api:v5
+  metadata:
+    name: server-deployment
+  template:
+    name: server-pods
+ingress:
+  host: todo.unknownclub.net
